@@ -6,9 +6,9 @@ use XeroPHP\Application\PrivateApplication;
 $config = [
     'oauth' => [
         'callback' => 'http://localhost/',
-        'consumer_key' => 'k',
-        'consumer_secret' => 's',
-        'rsa_private_key' => 'file://certs/private.pem',
+        'consumer_key' => 'VJ6YKUXUNEMA7AALDMMJBARJNVJNF8',
+        'consumer_secret' => 'OYQSNI2NPK5W8OS81ITQJUOZXDYXJT',
+        'rsa_private_key' => 'file://users/rwilson/WWC/Koko/resources/keys/privatekey.pem',
     ],
 ];
 

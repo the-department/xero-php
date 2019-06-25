@@ -11,6 +11,7 @@ class Request
     const METHOD_PUT = 'PUT';
     const METHOD_POST = 'POST';
     const METHOD_DELETE = 'DELETE';
+    const METHOD_PATCH = 'PATCH';
 
     const CONTENT_TYPE_HTML = 'text/html';
     const CONTENT_TYPE_XML = 'text/xml';
