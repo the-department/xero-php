@@ -82,9 +82,27 @@ class Project extends Remote\Model
     public static function getProperties()
     {
         return [
-            'ProjectId' => [false, self::PROPERTY_TYPE_GUID, null, false, false],
-            'ContactId' => [true, self::PROPERTY_TYPE_GUID, null, false, false],
-            'Name' => [true, self::PROPERTY_TYPE_STRING, null, false, false],
+            'projectId' => [false, self::PROPERTY_TYPE_GUID, null, false, false],
+            'contactId' => [true, self::PROPERTY_TYPE_GUID, null, false, false],
+            'name' => [true, self::PROPERTY_TYPE_STRING, null, false, false],
+            'CurrencyCode' => [true, self::PROPERTY_TYPE_STRING, null, false, false],
+            'MinutesLogged' => [true, self::PROPERTY_TYPE_INT, null, false, false],
+            'TotalTaskAmount' => [true, self::PROPERTY_TYPE_OBJECT, null, false, false],
+            'TotalExpenseAmount' => [true, self::PROPERTY_TYPE_OBJECT, null, false, false],
+            'MinutesToBeInvoiced' => [true, self::PROPERTY_TYPE_INT, null, false, false],
+            'TaskAmountToBeInvoiced' => [true, self::PROPERTY_TYPE_OBJECT, null, false, false],
+            'TaskAmountInvoiced' => [true, self::PROPERTY_TYPE_OBJECT, null, false, false],
+            'ExpenseAmountToBeInvoiced' => [true, self::PROPERTY_TYPE_OBJECT, null, false, false],
+            'ExpenseAmountInvoiced' => [true, self::PROPERTY_TYPE_OBJECT, null, false, false],
+            'ProjectAmountInvoiced' => [true, self::PROPERTY_TYPE_OBJECT, null, false, false],
+            'Deposit' => [true, self::PROPERTY_TYPE_OBJECT, null, false, false],
+            'DepositApplied' => [true, self::PROPERTY_TYPE_OBJECT, null, false, false],
+            'CreditNoteAmount' => [true, self::PROPERTY_TYPE_OBJECT, null, false, false],
+            'DeadlineUTC' => [true, self::PROPERTY_TYPE_STRING, null, false, false],
+            'TotalInvoiced' => [true, self::PROPERTY_TYPE_OBJECT, null, false, false],
+            'TotalToBeInvoiced' => [true, self::PROPERTY_TYPE_OBJECT, null, false, false],
+            'Estimate' => [true, self::PROPERTY_TYPE_OBJECT, null, false, false],
+            'Status' => [true, self::PROPERTY_TYPE_STRING, null, false, false],
         ];
     }
 
@@ -98,7 +116,7 @@ class Project extends Remote\Model
      */
     public function getName()
     {
-        return $this->_data['Name'];
+        return $this->_data['name'];
     }
 
     /**
@@ -107,7 +125,7 @@ class Project extends Remote\Model
      */
     public function setName($value)
     {
-        $this->propertyUpdated('Name', $value);
+        $this->propertyUpdated('name', $value);
         $this->_data['Name'] = $value;
 
         return $this;
@@ -118,7 +136,7 @@ class Project extends Remote\Model
      */
     public function getContactId()
     {
-        return $this->_data['ContactId'];
+        return $this->_data['contactId'];
     }
 
     /**
@@ -127,8 +145,8 @@ class Project extends Remote\Model
      */
     public function setContactId($value)
     {
-        $this->propertyUpdated('ContactId', $value);
-        $this->_data['ContactId'] = $value;
+        $this->propertyUpdated('contactId', $value);
+        $this->_data['contactId'] = $value;
 
         return $this;
     }
@@ -138,7 +156,7 @@ class Project extends Remote\Model
      */
     public function getProjectId()
     {
-        return $this->_data['ProjectId'];
+        return $this->_data['projectId'];
     }
 
     /**
@@ -147,8 +165,8 @@ class Project extends Remote\Model
      */
     public function setProjectId($value)
     {
-        $this->propertyUpdated('ProjectId', $value);
-        $this->_data['ProjectId'] = $value;
+        $this->propertyUpdated('projectId', $value);
+        $this->_data['projectId'] = $value;
 
         return $this;
     }
